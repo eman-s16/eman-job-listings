@@ -1,0 +1,221 @@
+* {
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+@media only screen and (max-width: 375px) {
+    * {
+        font-size: 10px;
+    }
+}
+
+:root {
+    --Lightground: hsl(180, 52%, 96%);
+    --LightFilter: hsl(180, 31%, 95%);
+    --DarkGrayish: hsl(180, 8%, 52%);
+    --VeryDark: hsl(180, 14%, 20%);
+    --blue: #5ea5a3;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&family=Lexend+Deca&display=swap');
+
+body {
+    background-color: hsl(180, 52%, 96%);
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url("../images/bg-header-desktop.svg");
+    background-color: var(--blue);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+    height: 120px;
+}
+
+@media only screen and (max-width: 375px) {
+    .header {
+        background-position: right 0 bottom 100%;
+    }
+}
+
+.seaction {
+    margin: 40px;
+}
+
+@media only screen and (max-width: 375px) {
+    .seaction {
+        margin: 60px 20px;
+    }
+}
+
+.box {
+    background-color: white;
+}
+
+@media only screen and (max-width: 375px) {
+    .box {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50px !important;
+    }
+}
+
+.box:first-child::before,
+.box:nth-child(2):before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--blue);
+    top: 0;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.box_container {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 375px) {
+    .box_container {
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+        border-bottom: 1px solid var(--DarkGrayish);
+    }
+
+    .img-box {
+        position: absolute;
+        top: -23px;
+    }
+
+        .img-box img {
+            width: 50%;
+        }
+}
+
+.box_container div:first-child {
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 375px) {
+    .text-box {
+        text-align: left;
+        margin-top: 20px;
+    }
+}
+
+.text-box h4 {
+    font-weight: 700;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.text-box h5 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--blue);
+    text-transform: capitalize;
+}
+
+    .text-box h5 span {
+        color: white;
+        padding: 2px 12px;
+        border-radius: 10px;
+        margin: 0 8px;
+        text-transform: uppercase;
+    }
+
+        .text-box h5 span.new {
+            background-color: var(--blue);
+        }
+
+        .text-box h5 span.feat {
+            background-color: var(--VeryDark);
+        }
+
+@media only screen and (max-width: 375px) {
+    .text-box h4,
+    .text-box h5 {
+        font-size: 10px;
+    }
+
+    .text-box h5 {
+        margin: 10px 0;
+    }
+
+        .text-box h5 span {
+            margin: 0 2px;
+        }
+}
+
+.text-box ul {
+    color: var(--DarkGrayish);
+    display: inline-flex;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+@media only screen and (max-width: 375px) {
+    .text-box ul {
+        margin-bottom: 3px;
+    }
+}
+
+.text-box ul li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.text-box ul li:first-child {
+    list-style: none;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .right-side ul {
+        display: inline-flex;
+        padding: 0;
+    }
+
+        .right-side ul li {
+            color: var(--blue);
+            background-color: var(--LightFilter);
+            list-style: none;
+            margin: 0 10px;
+            padding: 3px 10px;
+            border-radius: 5px;
+        }
+
+            .right-side ul li:hover {
+                color: var(--LightFilter);
+                background-color: var(--blue);
+            }
+
+@media only screen and (max-width: 375px) {
+    .right-side {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .right-side ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+
+            .right-side ul li {
+                margin-right: 10px;
+                margin-bottom: 10px;
+                margin-left: 0;
+            }
+}
